@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
-# render-build.sh
-
-# Interrompe em caso de erro
+# aborta se der erro
 set -o errexit  
 
-echo "===> Instalando dependências"
-pip install -r requirements.txt
-
-echo "===> Rodando collectstatic"
+echo "=== Rodando collectstatic ==="
 python manage.py collectstatic --noinput
 
-echo "===> Rodando migrations"
+echo "=== Rodando migrations ==="
 python manage.py migrate --noinput
 
-echo "===> Carregando assentos"
-python manage.py loaddata venda_cadeiras/assentos_completos.json || true
+echo "=== Carregando assentos ==="
+python manage.py loaddata assentos_completos.json || true
