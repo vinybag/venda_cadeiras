@@ -1,0 +1,3134 @@
+[
+  {
+    "model": "ingressos.assento",
+    "pk": 1,
+    "fields": {
+      "nome": "ASSENTO A1",
+      "coords": "1709,1948,1742,1892",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 2,
+    "fields": {
+      "nome": "ASSENTO A2",
+      "coords": "1766,1943,1793,1892",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 3,
+    "fields": {
+      "nome": "ASSENTO A3",
+      "coords": "1823,1885,1850,1947",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 4,
+    "fields": {
+      "nome": "ASSENTO A4",
+      "coords": "1878,1889,1908,1943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 5,
+    "fields": {
+      "nome": "ASSENTO A5",
+      "coords": "1932,1889,1962,1943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 6,
+    "fields": {
+      "nome": "ASSENTO A6",
+      "coords": "1983,1892,2023,1946",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 7,
+    "fields": {
+      "nome": "ASSENTO A7",
+      "coords": "2040,1889,2075,1944",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 8,
+    "fields": {
+      "nome": "ASSENTO A8",
+      "coords": "2095,1892,2135,1946",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 9,
+    "fields": {
+      "nome": "ASSENTO A9",
+      "coords": "2149,1892,2190,1945",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 10,
+    "fields": {
+      "nome": "ASSENTO B1",
+      "coords": "877,1858,918,1919",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 11,
+    "fields": {
+      "nome": "ASSENTO B2",
+      "coords": "938,1862,975,1916",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 12,
+    "fields": {
+      "nome": "ASSENTO B3",
+      "coords": "999,1858,1030,1916",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 13,
+    "fields": {
+      "nome": "ASSENTO B4",
+      "coords": "1050,1862,1087,1912",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 14,
+    "fields": {
+      "nome": "ASSENTO B5",
+      "coords": "1101,1862,1141,1912",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 15,
+    "fields": {
+      "nome": "ASSENTO B6",
+      "coords": "1165,1855,1199,1912",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 16,
+    "fields": {
+      "nome": "ASSENTO B7",
+      "coords": "1708,1807,1738,1860",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 17,
+    "fields": {
+      "nome": "ASSENTO B8",
+      "coords": "1762,1811,1796,1862",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 18,
+    "fields": {
+      "nome": "ASSENTO B9",
+      "coords": "1820,1807,1854,1865",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 19,
+    "fields": {
+      "nome": "ASSENTO B10",
+      "coords": "1874,1811,1912,1862",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 20,
+    "fields": {
+      "nome": "ASSENTO B11",
+      "coords": "1928,1807,1966,1862",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 21,
+    "fields": {
+      "nome": "ASSENTO B12",
+      "coords": "2017,1807,1986,1862",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 22,
+    "fields": {
+      "nome": "ASSENTO B13",
+      "coords": "2044,1807,2078,1865",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 23,
+    "fields": {
+      "nome": "ASSENTO B14",
+      "coords": "2098,1804,2135,1868",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 24,
+    "fields": {
+      "nome": "ASSENTO B15",
+      "coords": "2159,1804,2190,1865",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 25,
+    "fields": {
+      "nome": "ASSENTO B16",
+      "coords": "2692,1862,2736,1920",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 26,
+    "fields": {
+      "nome": "ASSENTO B17",
+      "coords": "2753,1857,2790,1916",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 27,
+    "fields": {
+      "nome": "ASSENTO B18",
+      "coords": "2810,1862,2851,1916",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 28,
+    "fields": {
+      "nome": "ASSENTO B19",
+      "coords": "2868,1858,2905,1912",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 29,
+    "fields": {
+      "nome": "ASSENTO B20",
+      "coords": "2919,1855,2956,1916",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 30,
+    "fields": {
+      "nome": "ASSENTO B21",
+      "coords": "2983,1858,3014,1919",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 31,
+    "fields": {
+      "nome": "ASSENTO C1",
+      "coords": "880,1780,918,1831",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 32,
+    "fields": {
+      "nome": "ASSENTO C2",
+      "coords": "938,1784,975,1826",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 33,
+    "fields": {
+      "nome": "ASSENTO C3",
+      "coords": "996,1777,1027,1824",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 34,
+    "fields": {
+      "nome": "ASSENTO C4",
+      "coords": "1053,1780,1087,1831",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 35,
+    "fields": {
+      "nome": "ASSENTO C5",
+      "coords": "1108,1780,1141,1834",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 36,
+    "fields": {
+      "nome": "ASSENTO C6",
+      "coords": "1162,1780,1199,1834",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 37,
+    "fields": {
+      "nome": "ASSENTO C7",
+      "coords": "1705,1729,1739,1787",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 38,
+    "fields": {
+      "nome": "ASSENTO C8",
+      "coords": "1759,1723,1796,1780",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 39,
+    "fields": {
+      "nome": "ASSENTO C9",
+      "coords": "1823,1726,1857,1780",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 40,
+    "fields": {
+      "nome": "ASSENTO C10",
+      "coords": "1878,1729,1912,1784",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 41,
+    "fields": {
+      "nome": "ASSENTO C11",
+      "coords": "1932,1784,1962,1729",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 42,
+    "fields": {
+      "nome": "ASSENTO C12",
+      "coords": "1986,1726,2020,1780",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 43,
+    "fields": {
+      "nome": "ASSENTO C13",
+      "coords": "2040,1726,2078,1784",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 44,
+    "fields": {
+      "nome": "ASSENTO C14",
+      "coords": "2095,1726,2135,1784",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 45,
+    "fields": {
+      "nome": "ASSENTO C15",
+      "coords": "2152,1726,2193,1784",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 46,
+    "fields": {
+      "nome": "ASSENTO C16",
+      "coords": "2699,1777,2736,1831",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 47,
+    "fields": {
+      "nome": "ASSENTO C17",
+      "coords": "2753,1777,2793,1831",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 48,
+    "fields": {
+      "nome": "ASSENTO C18",
+      "coords": "2807,1780,2841,1832",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 49,
+    "fields": {
+      "nome": "ASSENTO C19",
+      "coords": "2865,1780,2905,1828",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 50,
+    "fields": {
+      "nome": "ASSENTO C20",
+      "coords": "2926,1777,2960,1834",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 51,
+    "fields": {
+      "nome": "ASSENTO C21",
+      "coords": "2977,1780,3017,1834",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 52,
+    "fields": {
+      "nome": "ASSENTO D1",
+      "coords": "880,1699,918,1750",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 53,
+    "fields": {
+      "nome": "ASSENTO D2",
+      "coords": "935,1699,975,1750",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 54,
+    "fields": {
+      "nome": "ASSENTO D3",
+      "coords": "999,1699,1030,1752",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 55,
+    "fields": {
+      "nome": "ASSENTO D4",
+      "coords": "1050,1702,1080,1750",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 56,
+    "fields": {
+      "nome": "ASSENTO D5",
+      "coords": "1141,1699,1104,1756",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 57,
+    "fields": {
+      "nome": "ASSENTO D6",
+      "coords": "1162,1699,1199,1747",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 58,
+    "fields": {
+      "nome": "ASSENTO D7",
+      "coords": "1705,1645,1739,1699",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 59,
+    "fields": {
+      "nome": "ASSENTO D8",
+      "coords": "1766,1645,1796,1700",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 60,
+    "fields": {
+      "nome": "ASSENTO D9",
+      "coords": "1820,1651,1857,1699",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 61,
+    "fields": {
+      "nome": "ASSENTO D10",
+      "coords": "1874,1648,1908,1698",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 62,
+    "fields": {
+      "nome": "ASSENTO D11",
+      "coords": "1928,1648,1966,1699",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 63,
+    "fields": {
+      "nome": "ASSENTO D12",
+      "coords": "1986,1648,2020,1695",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 64,
+    "fields": {
+      "nome": "ASSENTO D13",
+      "coords": "2044,1648,2078,1702",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 65,
+    "fields": {
+      "nome": "ASSENTO D14",
+      "coords": "2095,1646,2132,1700",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 66,
+    "fields": {
+      "nome": "ASSENTO D15",
+      "coords": "2149,1644,2183,1699",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 67,
+    "fields": {
+      "nome": "ASSENTO D16",
+      "coords": "2692,1699,2732,1753",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 68,
+    "fields": {
+      "nome": "ASSENTO D17",
+      "coords": "2753,1694,2787,1752",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 69,
+    "fields": {
+      "nome": "ASSENTO D18",
+      "coords": "2810,1694,2844,1756",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 70,
+    "fields": {
+      "nome": "ASSENTO D19",
+      "coords": "2865,1699,2905,1753",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 71,
+    "fields": {
+      "nome": "ASSENTO D20",
+      "coords": "2922,1699,2953,1750",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 72,
+    "fields": {
+      "nome": "ASSENTO D21",
+      "coords": "2977,1695,3017,1753",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 73,
+    "fields": {
+      "nome": "ASSENTO E1",
+      "coords": "877,1621,911,1668",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 74,
+    "fields": {
+      "nome": "ASSENTO E2",
+      "coords": "938,1617,975,1672",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 75,
+    "fields": {
+      "nome": "ASSENTO E3",
+      "coords": "996,1613,1030,1665",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 76,
+    "fields": {
+      "nome": "ASSENTO E4",
+      "coords": "1050,1617,1087,1672",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 77,
+    "fields": {
+      "nome": "ASSENTO E5",
+      "coords": "1108,1617,1141,1672",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 78,
+    "fields": {
+      "nome": "ASSENTO E6",
+      "coords": "1162,1614,1199,1675",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 79,
+    "fields": {
+      "nome": "ASSENTO E7",
+      "coords": "1705,1577,1742,1628",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 80,
+    "fields": {
+      "nome": "ASSENTO E8",
+      "coords": "1766,1573,1800,1631",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 81,
+    "fields": {
+      "nome": "ASSENTO E9",
+      "coords": "1820,1580,1854,1631",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 82,
+    "fields": {
+      "nome": "ASSENTO E10",
+      "coords": "1871,1577,1908,1628",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 83,
+    "fields": {
+      "nome": "ASSENTO E11",
+      "coords": "1929,1572,1966,1626",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 84,
+    "fields": {
+      "nome": "ASSENTO E12",
+      "coords": "1986,1572,2023,1631",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 85,
+    "fields": {
+      "nome": "ASSENTO E13",
+      "coords": "2047,1577,2078,1631",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 86,
+    "fields": {
+      "nome": "ASSENTO E14",
+      "coords": "2101,1577,2135,1638",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 87,
+    "fields": {
+      "nome": "ASSENTO E15",
+      "coords": "2149,1578,2190,1634",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 88,
+    "fields": {
+      "nome": "ASSENTO E16",
+      "coords": "2692,1621,2736,1668",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 89,
+    "fields": {
+      "nome": "ASSENTO E17",
+      "coords": "2756,1617,2793,1672",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 90,
+    "fields": {
+      "nome": "ASSENTO E18",
+      "coords": "2807,1617,2848,1672",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 91,
+    "fields": {
+      "nome": "ASSENTO E19",
+      "coords": "2868,1617,2896,1669",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 92,
+    "fields": {
+      "nome": "ASSENTO E20",
+      "coords": "2922,1617,2959,1667",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 93,
+    "fields": {
+      "nome": "ASSENTO E21",
+      "coords": "2977,1614,3014,1665",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 94,
+    "fields": {
+      "nome": "ASSENTO F1",
+      "coords": "880,1539,914,1588",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 95,
+    "fields": {
+      "nome": "ASSENTO F2",
+      "coords": "938,1533,973,1587",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 96,
+    "fields": {
+      "nome": "ASSENTO F3",
+      "coords": "999,1539,1030,1590",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 97,
+    "fields": {
+      "nome": "ASSENTO F4",
+      "coords": "1053,1539,1084,1593",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 98,
+    "fields": {
+      "nome": "ASSENTO F5",
+      "coords": "1108,1531,1139,1592",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 99,
+    "fields": {
+      "nome": "ASSENTO F6",
+      "coords": "1158,1536,1196,1594",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 100,
+    "fields": {
+      "nome": "ASSENTO F7",
+      "coords": "1705,1492,1745,1556",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 101,
+    "fields": {
+      "nome": "ASSENTO F8",
+      "coords": "1762,1499,1796,1550",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 102,
+    "fields": {
+      "nome": "ASSENTO F9",
+      "coords": "1823,1499,1854,1553",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 103,
+    "fields": {
+      "nome": "ASSENTO F10",
+      "coords": "1871,1502,1908,1556",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 104,
+    "fields": {
+      "nome": "ASSENTO F11",
+      "coords": "1928,1499,1966,1553",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 105,
+    "fields": {
+      "nome": "ASSENTO F12",
+      "coords": "1983,1499,2020,1546",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 106,
+    "fields": {
+      "nome": "ASSENTO F13",
+      "coords": "2041,1498,2078,1550",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 107,
+    "fields": {
+      "nome": "ASSENTO F14",
+      "coords": "2098,1500,2135,1550",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 108,
+    "fields": {
+      "nome": "ASSENTO F15",
+      "coords": "2152,1489,2186,1550",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 109,
+    "fields": {
+      "nome": "ASSENTO F16",
+      "coords": "2698,1538,2735,1593",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 110,
+    "fields": {
+      "nome": "ASSENTO F17",
+      "coords": "2753,1537,2787,1591",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 111,
+    "fields": {
+      "nome": "ASSENTO F18",
+      "coords": "2810,1536,2846,1592",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 112,
+    "fields": {
+      "nome": "ASSENTO F19",
+      "coords": "2864,1535,2902,1590",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 113,
+    "fields": {
+      "nome": "ASSENTO F20",
+      "coords": "2922,1539,2960,1590",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 114,
+    "fields": {
+      "nome": "ASSENTO F21",
+      "coords": "2977,1535,3011,1590",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 115,
+    "fields": {
+      "nome": "ASSENTO G1",
+      "coords": "884,1451,918,1512",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 116,
+    "fields": {
+      "nome": "ASSENTO G2",
+      "coords": "941,1456,975,1510",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 117,
+    "fields": {
+      "nome": "ASSENTO G3",
+      "coords": "995,1457,1029,1508",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 118,
+    "fields": {
+      "nome": "ASSENTO G4",
+      "coords": "1050,1457,1087,1511",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 119,
+    "fields": {
+      "nome": "ASSENTO G5",
+      "coords": "1107,1454,1138,1505",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 120,
+    "fields": {
+      "nome": "ASSENTO G6",
+      "coords": "1165,1454,1199,1505",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 121,
+    "fields": {
+      "nome": "ASSENTO G7",
+      "coords": "1711,1421,1736,1463",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 122,
+    "fields": {
+      "nome": "ASSENTO G8",
+      "coords": "1766,1417,1796,1468",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 123,
+    "fields": {
+      "nome": "ASSENTO G9",
+      "coords": "1817,1418,1851,1462",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 124,
+    "fields": {
+      "nome": "ASSENTO G10",
+      "coords": "1874,1417,1905,1468",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 125,
+    "fields": {
+      "nome": "ASSENTO G11",
+      "coords": "1935,1417,1962,1468",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 126,
+    "fields": {
+      "nome": "ASSENTO G12",
+      "coords": "1986,1415,2020,1465",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 127,
+    "fields": {
+      "nome": "ASSENTO G13",
+      "coords": "2044,1414,2078,1468",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 128,
+    "fields": {
+      "nome": "ASSENTO G14",
+      "coords": "2098,1414,2135,1472",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 129,
+    "fields": {
+      "nome": "ASSENTO G15",
+      "coords": "2152,1417,2193,1472",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 130,
+    "fields": {
+      "nome": "ASSENTO G16",
+      "coords": "2695,1458,2736,1506",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 131,
+    "fields": {
+      "nome": "ASSENTO G17",
+      "coords": "2753,1458,2793,1512",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 132,
+    "fields": {
+      "nome": "ASSENTO G18",
+      "coords": "2807,1453,2847,1510",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 133,
+    "fields": {
+      "nome": "ASSENTO G19",
+      "coords": "2868,1453,2905,1509",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 134,
+    "fields": {
+      "nome": "ASSENTO G20",
+      "coords": "2922,1455,2953,1509",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 135,
+    "fields": {
+      "nome": "ASSENTO G21",
+      "coords": "2980,1455,3017,1509",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 136,
+    "fields": {
+      "nome": "ASSENTO H1",
+      "coords": "879,1371,917,1425",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 137,
+    "fields": {
+      "nome": "ASSENTO H2",
+      "coords": "941,1377,972,1428",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 138,
+    "fields": {
+      "nome": "ASSENTO H3",
+      "coords": "989,1371,1029,1428",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 139,
+    "fields": {
+      "nome": "ASSENTO H4",
+      "coords": "1047,1370,1087,1431",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 140,
+    "fields": {
+      "nome": "ASSENTO H5",
+      "coords": "1101,1370,1141,1423",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 141,
+    "fields": {
+      "nome": "ASSENTO H6",
+      "coords": "1162,1373,1196,1428",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 142,
+    "fields": {
+      "nome": "ASSENTO H7",
+      "coords": "1698,1336,1745,1390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 143,
+    "fields": {
+      "nome": "ASSENTO H8",
+      "coords": "1759,1336,1800,1390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 144,
+    "fields": {
+      "nome": "ASSENTO H9",
+      "coords": "1817,1336,1857,1395",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 145,
+    "fields": {
+      "nome": "ASSENTO H10",
+      "coords": "1871,1333,1912,1387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 146,
+    "fields": {
+      "nome": "ASSENTO H11",
+      "coords": "1928,1333,1966,1390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 147,
+    "fields": {
+      "nome": "ASSENTO H12",
+      "coords": "1986,1336,2023,1390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 148,
+    "fields": {
+      "nome": "ASSENTO H13",
+      "coords": "2047,1336,2078,1387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 149,
+    "fields": {
+      "nome": "ASSENTO H14",
+      "coords": "2101,1336,2135,1390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 150,
+    "fields": {
+      "nome": "ASSENTO H15",
+      "coords": "2152,1336,2193,1390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 151,
+    "fields": {
+      "nome": "ASSENTO H16",
+      "coords": "2692,1292,2732,1343",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 152,
+    "fields": {
+      "nome": "ASSENTO H17",
+      "coords": "2753,1292,2793,1350",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 153,
+    "fields": {
+      "nome": "ASSENTO H18",
+      "coords": "2814,1289,2848,1346",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 154,
+    "fields": {
+      "nome": "ASSENTO H19",
+      "coords": "2868,1289,2905,1346",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 155,
+    "fields": {
+      "nome": "ASSENTO H20",
+      "coords": "2926,1292,2963,1343",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 156,
+    "fields": {
+      "nome": "ASSENTO I1",
+      "coords": "877,1295,918,1349",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 157,
+    "fields": {
+      "nome": "ASSENTO I2",
+      "coords": "941,1295,975,1346",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 158,
+    "fields": {
+      "nome": "ASSENTO I3",
+      "coords": "996,1292,1030,1350",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 159,
+    "fields": {
+      "nome": "ASSENTO I4",
+      "coords": "1050,1289,1087,1350",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 160,
+    "fields": {
+      "nome": "ASSENTO I5",
+      "coords": "1108,1289,1142,1353",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 161,
+    "fields": {
+      "nome": "ASSENTO I6",
+      "coords": "1158,1289,1199,1350",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 162,
+    "fields": {
+      "nome": "ASSENTO I7",
+      "coords": "1701,1265,1745,1319",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 163,
+    "fields": {
+      "nome": "ASSENTO I8",
+      "coords": "1756,1260,1797,1318",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 164,
+    "fields": {
+      "nome": "ASSENTO I9",
+      "coords": "1817,1265,1857,1319",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 165,
+    "fields": {
+      "nome": "ASSENTO I10",
+      "coords": "1871,1263,1905,1319",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 166,
+    "fields": {
+      "nome": "ASSENTO I11",
+      "coords": "1928,1261,1966,1322",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 167,
+    "fields": {
+      "nome": "ASSENTO I12",
+      "coords": "1986,1265,2023,1319",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 168,
+    "fields": {
+      "nome": "ASSENTO I13",
+      "coords": "2040,1265,2081,1322",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 169,
+    "fields": {
+      "nome": "ASSENTO I14",
+      "coords": "2098,1265,2132,1319",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 170,
+    "fields": {
+      "nome": "ASSENTO I15",
+      "coords": "2152,1261,2193,1322",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 171,
+    "fields": {
+      "nome": "ASSENTO J1",
+      "coords": "877,1211,918,1265",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 172,
+    "fields": {
+      "nome": "ASSENTO J2",
+      "coords": "941,1211,976,1268",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 173,
+    "fields": {
+      "nome": "ASSENTO J3",
+      "coords": "989,1210,1030,1268",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 174,
+    "fields": {
+      "nome": "ASSENTO J4",
+      "coords": "1047,1208,1084,1268",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 175,
+    "fields": {
+      "nome": "ASSENTO J5",
+      "coords": "1107,1208,1141,1268",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 176,
+    "fields": {
+      "nome": "ASSENTO J6",
+      "coords": "1705,1183,1741,1239",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 177,
+    "fields": {
+      "nome": "ASSENTO J7",
+      "coords": "1759,1183,1800,1241",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 178,
+    "fields": {
+      "nome": "ASSENTO J8",
+      "coords": "1820,1183,1857,1238",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 179,
+    "fields": {
+      "nome": "ASSENTO J9",
+      "coords": "1874,1183,1912,1238",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 180,
+    "fields": {
+      "nome": "ASSENTO J10",
+      "coords": "1928,1183,1966,1238",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 181,
+    "fields": {
+      "nome": "ASSENTO J11",
+      "coords": "1986,1187,2023,1238",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 182,
+    "fields": {
+      "nome": "ASSENTO J12",
+      "coords": "2044,1180,2078,1241",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 183,
+    "fields": {
+      "nome": "ASSENTO J13",
+      "coords": "2098,1183,2132,1238",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 184,
+    "fields": {
+      "nome": "ASSENTO J14",
+      "coords": "2149,1185,2183,1238",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 185,
+    "fields": {
+      "nome": "ASSENTO J15",
+      "coords": "2695,1211,2736,1268",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 186,
+    "fields": {
+      "nome": "ASSENTO J16",
+      "coords": "2756,1214,2794,1268",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 187,
+    "fields": {
+      "nome": "ASSENTO J17",
+      "coords": "2810,1211,2847,1267",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 188,
+    "fields": {
+      "nome": "ASSENTO J18",
+      "coords": "2864,1212,2901,1266",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 189,
+    "fields": {
+      "nome": "ASSENTO J19",
+      "coords": "2919,1208,2959,1265",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 190,
+    "fields": {
+      "nome": "ASSENTO J20",
+      "coords": "2980,1211,3017,1265",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 191,
+    "fields": {
+      "nome": "ASSENTO K1",
+      "coords": "877,1133,921,1187",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 192,
+    "fields": {
+      "nome": "ASSENTO K2",
+      "coords": "935,1133,975,1187",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 193,
+    "fields": {
+      "nome": "ASSENTO K3",
+      "coords": "993,1130,1033,1187",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 194,
+    "fields": {
+      "nome": "ASSENTO K4",
+      "coords": "1053,1133,1084,1187",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 195,
+    "fields": {
+      "nome": "ASSENTO K5",
+      "coords": "1104,1129,1145,1187",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 196,
+    "fields": {
+      "nome": "ASSENTO K6",
+      "coords": "1698,1105,1745,1163",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 197,
+    "fields": {
+      "nome": "ASSENTO K7",
+      "coords": "1759,1102,1796,1166",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 198,
+    "fields": {
+      "nome": "ASSENTO K8",
+      "coords": "1817,1102,1853,1162",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 199,
+    "fields": {
+      "nome": "ASSENTO K9",
+      "coords": "1874,1102,1912,1160",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 200,
+    "fields": {
+      "nome": "ASSENTO K10",
+      "coords": "1928,1102,1962,1160",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 201,
+    "fields": {
+      "nome": "ASSENTO K11",
+      "coords": "1983,1105,2023,1160",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 202,
+    "fields": {
+      "nome": "ASSENTO K12",
+      "coords": "2047,1102,2081,1160",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 203,
+    "fields": {
+      "nome": "ASSENTO K13",
+      "coords": "2101,1102,2135,1156",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 204,
+    "fields": {
+      "nome": "ASSENTO K14",
+      "coords": "2152,1102,2193,1157",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 205,
+    "fields": {
+      "nome": "ASSENTO K15",
+      "coords": "2692,1129,2736,1185",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 206,
+    "fields": {
+      "nome": "ASSENTO K16",
+      "coords": "2753,1129,2793,1187",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 207,
+    "fields": {
+      "nome": "ASSENTO K17",
+      "coords": "2810,1126,2847,1184",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 208,
+    "fields": {
+      "nome": "ASSENTO K18",
+      "coords": "2865,1126,2899,1187",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 209,
+    "fields": {
+      "nome": "ASSENTO K19",
+      "coords": "2922,1126,2963,1189",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 210,
+    "fields": {
+      "nome": "ASSENTO L1",
+      "coords": "880,1051,918,1102",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 211,
+    "fields": {
+      "nome": "ASSENTO L2",
+      "coords": "935,1051,972,1109",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 212,
+    "fields": {
+      "nome": "ASSENTO L3",
+      "coords": "996,1051,1030,1105",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 213,
+    "fields": {
+      "nome": "ASSENTO L4",
+      "coords": "1053,1053,1084,1105",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 214,
+    "fields": {
+      "nome": "ASSENTO L5",
+      "coords": "1105,1051,1141,1105",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 215,
+    "fields": {
+      "nome": "ASSENTO L6",
+      "coords": "1698,1024,1739,1078",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 216,
+    "fields": {
+      "nome": "ASSENTO L7",
+      "coords": "1762,1024,1800,1075",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 217,
+    "fields": {
+      "nome": "ASSENTO L8",
+      "coords": "1817,1024,1857,1075",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 218,
+    "fields": {
+      "nome": "ASSENTO L9",
+      "coords": "1874,1021,1908,1082",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 219,
+    "fields": {
+      "nome": "ASSENTO L10",
+      "coords": "1928,1021,1969,1079",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 220,
+    "fields": {
+      "nome": "ASSENTO L11",
+      "coords": "1983,1024,2023,1078",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 221,
+    "fields": {
+      "nome": "ASSENTO L12",
+      "coords": "2040,1022,2071,1076",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 222,
+    "fields": {
+      "nome": "ASSENTO L13",
+      "coords": "2095,1021,2135,1078",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 223,
+    "fields": {
+      "nome": "ASSENTO L14",
+      "coords": "2149,1024,2190,1078",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 224,
+    "fields": {
+      "nome": "ASSENTO L15",
+      "coords": "2695,1050,2736,1104",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 225,
+    "fields": {
+      "nome": "ASSENTO L16",
+      "coords": "2756,1049,2793,1102",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 226,
+    "fields": {
+      "nome": "ASSENTO L17",
+      "coords": "2810,1051,2848,1105",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 227,
+    "fields": {
+      "nome": "ASSENTO L18",
+      "coords": "2865,1051,2905,1105",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 228,
+    "fields": {
+      "nome": "ASSENTO L19",
+      "coords": "2916,1051,2963,1104",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 229,
+    "fields": {
+      "nome": "ASSENTO M1",
+      "coords": "877,966,921,1024",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 230,
+    "fields": {
+      "nome": "ASSENTO M2",
+      "coords": "941,969,972,1024",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 231,
+    "fields": {
+      "nome": "ASSENTO M3",
+      "coords": "989,966,1030,1024",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 232,
+    "fields": {
+      "nome": "ASSENTO M4",
+      "coords": "1053,967,1084,1024",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 233,
+    "fields": {
+      "nome": "ASSENTO M5",
+      "coords": "1104,968,1145,1027",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 234,
+    "fields": {
+      "nome": "ASSENTO M6",
+      "coords": "1701,953,1742,1007",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 235,
+    "fields": {
+      "nome": "ASSENTO M7",
+      "coords": "1762,951,1800,1007",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 236,
+    "fields": {
+      "nome": "ASSENTO M8",
+      "coords": "1816,948,1857,1012",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 237,
+    "fields": {
+      "nome": "ASSENTO M9",
+      "coords": "1875,951,1912,1007",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 238,
+    "fields": {
+      "nome": "ASSENTO M10",
+      "coords": "1928,953,1966,1007",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 239,
+    "fields": {
+      "nome": "ASSENTO M11",
+      "coords": "1983,954,2023,1004",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 240,
+    "fields": {
+      "nome": "ASSENTO M12",
+      "coords": "2040,949,2081,1004",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 241,
+    "fields": {
+      "nome": "ASSENTO M13",
+      "coords": "2095,946,2135,1004",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 242,
+    "fields": {
+      "nome": "ASSENTO M14",
+      "coords": "2152,946,2190,1004",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 243,
+    "fields": {
+      "nome": "ASSENTO M15",
+      "coords": "2695,966,2739,1031",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 244,
+    "fields": {
+      "nome": "ASSENTO M16",
+      "coords": "2753,966,2787,1024",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 245,
+    "fields": {
+      "nome": "ASSENTO M17",
+      "coords": "2807,970,2844,1024",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 246,
+    "fields": {
+      "nome": "ASSENTO M18",
+      "coords": "2865,973,2905,1024",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 247,
+    "fields": {
+      "nome": "ASSENTO M19",
+      "coords": "2922,970,2960,1027",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 248,
+    "fields": {
+      "nome": "ASSENTO N1",
+      "coords": "877,892,918,949",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 249,
+    "fields": {
+      "nome": "ASSENTO N2",
+      "coords": "935,888,972,943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 250,
+    "fields": {
+      "nome": "ASSENTO N3",
+      "coords": "989,892,1030,946",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 251,
+    "fields": {
+      "nome": "ASSENTO N4",
+      "coords": "1047,892,1087,943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 252,
+    "fields": {
+      "nome": "ASSENTO N5",
+      "coords": "1104,885,1145,946",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 253,
+    "fields": {
+      "nome": "ASSENTO N6",
+      "coords": "1701,871,1739,925",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 254,
+    "fields": {
+      "nome": "ASSENTO N7",
+      "coords": "1762,868,1796,929",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 255,
+    "fields": {
+      "nome": "ASSENTO N8",
+      "coords": "1817,871,1854,926",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 256,
+    "fields": {
+      "nome": "ASSENTO N9",
+      "coords": "1871,871,1908,922",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 257,
+    "fields": {
+      "nome": "ASSENTO N10",
+      "coords": "1928,871,1969,926",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 258,
+    "fields": {
+      "nome": "ASSENTO N11",
+      "coords": "1986,871,2023,922",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 259,
+    "fields": {
+      "nome": "ASSENTO N12",
+      "coords": "2040,871,2078,926",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 260,
+    "fields": {
+      "nome": "ASSENTO N13",
+      "coords": "2098,868,2135,926",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 261,
+    "fields": {
+      "nome": "ASSENTO N14",
+      "coords": "2152,868,2183,922",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 262,
+    "fields": {
+      "nome": "ASSENTO N15",
+      "coords": "2695,892,2732,943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 263,
+    "fields": {
+      "nome": "ASSENTO N16",
+      "coords": "2753,888,2787,943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 264,
+    "fields": {
+      "nome": "ASSENTO N17",
+      "coords": "2810,888,2844,939",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 265,
+    "fields": {
+      "nome": "ASSENTO N18",
+      "coords": "2865,888,2899,943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 266,
+    "fields": {
+      "nome": "ASSENTO N19",
+      "coords": "2916,892,2956,943",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 267,
+    "fields": {
+      "nome": "ASSENTO O1",
+      "coords": "877,807,918,865",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 268,
+    "fields": {
+      "nome": "ASSENTO O2",
+      "coords": "935,810,972,861",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 269,
+    "fields": {
+      "nome": "ASSENTO O3",
+      "coords": "992,810,1030,865",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 270,
+    "fields": {
+      "nome": "ASSENTO O4",
+      "coords": "1050,804,1084,861",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 271,
+    "fields": {
+      "nome": "ASSENTO O5",
+      "coords": "1101,807,1141,861",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 272,
+    "fields": {
+      "nome": "ASSENTO O6",
+      "coords": "1705,793,1739,838",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 273,
+    "fields": {
+      "nome": "ASSENTO O7",
+      "coords": "1759,790,1796,844",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 274,
+    "fields": {
+      "nome": "ASSENTO O8",
+      "coords": "1817,790,1850,844",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 275,
+    "fields": {
+      "nome": "ASSENTO O9",
+      "coords": "1874,793,1908,841",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 276,
+    "fields": {
+      "nome": "ASSENTO O10",
+      "coords": "1928,793,1962,844",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 277,
+    "fields": {
+      "nome": "ASSENTO O11",
+      "coords": "1983,793,2023,844",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 278,
+    "fields": {
+      "nome": "ASSENTO O12",
+      "coords": "2040,787,2078,844",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 279,
+    "fields": {
+      "nome": "ASSENTO O13",
+      "coords": "2095,790,2135,844",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 280,
+    "fields": {
+      "nome": "ASSENTO O14",
+      "coords": "2149,790,2190,844",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 281,
+    "fields": {
+      "nome": "ASSENTO O15",
+      "coords": "2692,810,2732,865",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 282,
+    "fields": {
+      "nome": "ASSENTO O16",
+      "coords": "2756,810,2787,861",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 283,
+    "fields": {
+      "nome": "ASSENTO O17",
+      "coords": "2804,810,2844,865",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 284,
+    "fields": {
+      "nome": "ASSENTO O18",
+      "coords": "2865,807,2899,861",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 285,
+    "fields": {
+      "nome": "ASSENTO O19",
+      "coords": "2919,807,2956,861",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 286,
+    "fields": {
+      "nome": "ASSENTO P1",
+      "coords": "2695,739,2732,790",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 287,
+    "fields": {
+      "nome": "ASSENTO P2",
+      "coords": "2753,739,2790,790",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 288,
+    "fields": {
+      "nome": "ASSENTO P3",
+      "coords": "2804,739,2841,793",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 289,
+    "fields": {
+      "nome": "ASSENTO P4",
+      "coords": "2865,739,2902,790",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 290,
+    "fields": {
+      "nome": "ASSENTO P5",
+      "coords": "2922,739,2956,790",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 291,
+    "fields": {
+      "nome": "ASSENTO Q1",
+      "coords": "2695,658,2732,705",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 292,
+    "fields": {
+      "nome": "ASSENTO Q2",
+      "coords": "2749,658,2787,709",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 293,
+    "fields": {
+      "nome": "ASSENTO Q3",
+      "coords": "2807,658,2841,712",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 294,
+    "fields": {
+      "nome": "ASSENTO Q4",
+      "coords": "2868,658,2899,712",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 295,
+    "fields": {
+      "nome": "ASSENTO Q5",
+      "coords": "2916,651,2956,705",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 296,
+    "fields": {
+      "nome": "ASSENTO R1",
+      "coords": "2695,576,2732,627",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 297,
+    "fields": {
+      "nome": "ASSENTO R2",
+      "coords": "2749,573,2793,631",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 298,
+    "fields": {
+      "nome": "ASSENTO R3",
+      "coords": "2807,573,2841,627",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 299,
+    "fields": {
+      "nome": "ASSENTO R4",
+      "coords": "2868,576,2899,624",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 300,
+    "fields": {
+      "nome": "ASSENTO R5",
+      "coords": "2922,580,2956,624",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 301,
+    "fields": {
+      "nome": "MEZANINO 1",
+      "coords": "1450,336,1487,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 302,
+    "fields": {
+      "nome": "MEZANINO 2",
+      "coords": "1511,336,1542,387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 303,
+    "fields": {
+      "nome": "MEZANINO 3",
+      "coords": "1566,332,1599,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 304,
+    "fields": {
+      "nome": "MEZANINO 4",
+      "coords": "1620,336,1654,383",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 305,
+    "fields": {
+      "nome": "MEZANINO 5",
+      "coords": "1677,336,1711,387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 306,
+    "fields": {
+      "nome": "MEZANINO 6",
+      "coords": "1735,332,1766,387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 307,
+    "fields": {
+      "nome": "MEZANINO 7",
+      "coords": "1783,332,1823,387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 308,
+    "fields": {
+      "nome": "MEZANINO 8",
+      "coords": "1844,336,1878,387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 309,
+    "fields": {
+      "nome": "MEZANINO 9",
+      "coords": "2061,332,2105,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 310,
+    "fields": {
+      "nome": "MEZANINO 10",
+      "coords": "2122,332,2159,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 311,
+    "fields": {
+      "nome": "MEZANINO 11",
+      "coords": "2180,332,2220,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 312,
+    "fields": {
+      "nome": "MEZANINO 12",
+      "coords": "2237,336,2268,387",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 313,
+    "fields": {
+      "nome": "MEZANINO 13",
+      "coords": "2291,336,2332,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 314,
+    "fields": {
+      "nome": "MEZANINO 14",
+      "coords": "2349,336,2386,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 315,
+    "fields": {
+      "nome": "MEZANINO 15",
+      "coords": "2403,336,2441,390",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 316,
+    "fields": {
+      "nome": "MEZANINO 16",
+      "coords": "1453,258,1490,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 317,
+    "fields": {
+      "nome": "MEZANINO 17",
+      "coords": "1511,258,1542,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 318,
+    "fields": {
+      "nome": "MEZANINO 18",
+      "coords": "1562,254,1599,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 319,
+    "fields": {
+      "nome": "MEZANINO 19",
+      "coords": "1623,254,1654,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 320,
+    "fields": {
+      "nome": "MEZANINO 20",
+      "coords": "1671,251,1711,305",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 321,
+    "fields": {
+      "nome": "MEZANINO 21",
+      "coords": "1735,258,1766,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 322,
+    "fields": {
+      "nome": "MEZANINO 22",
+      "coords": "1789,251,1823,305",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 323,
+    "fields": {
+      "nome": "MEZANINO 23",
+      "coords": "1847,254,1878,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 324,
+    "fields": {
+      "nome": "MEZANINO 24",
+      "coords": "2068,254,2105,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 325,
+    "fields": {
+      "nome": "MEZANINO 25",
+      "coords": "2122,254,2159,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 326,
+    "fields": {
+      "nome": "MEZANINO 26",
+      "coords": "2180,254,2220,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 327,
+    "fields": {
+      "nome": "MEZANINO 27",
+      "coords": "2237,251,2271,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 328,
+    "fields": {
+      "nome": "MEZANINO 28",
+      "coords": "2291,254,2332,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 329,
+    "fields": {
+      "nome": "MEZANINO 29",
+      "coords": "2349,251,2386,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 330,
+    "fields": {
+      "nome": "MEZANINO 30",
+      "coords": "2403,254,2447,309",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 331,
+    "fields": {
+      "nome": "MEZANINO 31",
+      "coords": "1447,176,1487,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 332,
+    "fields": {
+      "nome": "MEZANINO 32",
+      "coords": "1508,176,1542,224",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 333,
+    "fields": {
+      "nome": "MEZANINO 33",
+      "coords": "1562,176,1596,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 334,
+    "fields": {
+      "nome": "MEZANINO 34",
+      "coords": "1623,173,1657,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 335,
+    "fields": {
+      "nome": "MEZANINO 35",
+      "coords": "1677,173,1711,224",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 336,
+    "fields": {
+      "nome": "MEZANINO 36",
+      "coords": "1732,176,1769,224",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 337,
+    "fields": {
+      "nome": "MEZANINO 37",
+      "coords": "1789,173,1820,224",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 338,
+    "fields": {
+      "nome": "MEZANINO 38",
+      "coords": "1844,173,1878,224",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 339,
+    "fields": {
+      "nome": "MEZANINO 39",
+      "coords": "1901,170,1932,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 340,
+    "fields": {
+      "nome": "MEZANINO 40",
+      "coords": "1956,173,1990,224",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 341,
+    "fields": {
+      "nome": "MEZANINO 41",
+      "coords": "2010,170,2044,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 342,
+    "fields": {
+      "nome": "MEZANINO 42",
+      "coords": "2074,170,2108,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 343,
+    "fields": {
+      "nome": "MEZANINO 43",
+      "coords": "2125,173,2159,224",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 344,
+    "fields": {
+      "nome": "MEZANINO 44",
+      "coords": "2180,173,2217,231",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 345,
+    "fields": {
+      "nome": "MEZANINO 45",
+      "coords": "2237,173,2274,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 346,
+    "fields": {
+      "nome": "MEZANINO 46",
+      "coords": "2291,173,2329,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 347,
+    "fields": {
+      "nome": "MEZANINO 47",
+      "coords": "2349,176,2386,227",
+      "ocupado": false
+    }
+  },
+  {
+    "model": "ingressos.assento",
+    "pk": 348,
+    "fields": {
+      "nome": "MEZANINO 48",
+      "coords": "2403,176,2441,227",
+      "ocupado": false
+    }
+  }
+]
