@@ -2,20 +2,27 @@ from pathlib import Path
 import os
 from urllib.parse import urlparse
 import dj_database_url
+import sys
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# 🔑 Segurança
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "sua_chave_dev_aqui")
-DEBUG = False  # 🚨 Em produção, deixe False
-ALLOWED_HOSTS = ["seudominio.com", "www.seudominio.com", "localhost", "127.0.0.1"]
+DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
+ALLOWED_HOSTS = [
+    "venda-cadeiras.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
+
+# Render define essa variável automaticamente → garante que hostname correto entra no ALLOWED_HOSTS
 RENDER_EXTERNAL_URL = os.environ.get("RENDER_EXTERNAL_URL")
 if RENDER_EXTERNAL_URL:
     ALLOWED_HOSTS.append(urlparse(RENDER_EXTERNAL_URL).hostname)
 
-    CSRF_TRUSTED_ORIGINS = [
+# Sempre habilitado em produção no Render
+CSRF_TRUSTED_ORIGINS = [
     "https://*.onrender.com",
-    "https://seudominio.com",
-    "https://www.seudominio.com",
 ]
 
 # Apps
@@ -29,9 +36,10 @@ INSTALLED_APPS = [
     'ingressos.apps.IngressosConfig',
 ]
 
+# Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # <- adicione
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # para servir staticfiles no Render
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -60,23 +68,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'venda_cadeiras.wsgi.application'
 
+# Banco de dados
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-# Se houver DATABASE_URL no ambiente (Render), usa ele.
 _db_url = os.environ.get("DATABASE_URL")
 if _db_url:
     DATABASES["default"] = dj_database_url.parse(
         _db_url,
         conn_max_age=600,
-        ssl_require=False,  # coloque True se seu Postgres exigir SSL
+        ssl_require=False,  # mude para True se o Postgres exigir SSL
     )
 
-# Senhas
+# Validação de senha
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {"NAME": 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -90,19 +97,37 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_TZ = True
 
+# Arquivos estáticos e mídia
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-# Opcional (melhora cache/versão):
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Configuração Efí (Pix)
 EFI_CLIENT_ID = "Client_Id_bb96cf1730689c416ead140de33487918ac8a52e"
 EFI_CLIENT_SECRET = "Client_Secret_8a2fb8f04428a7150a6ee62661c913d5949d4436"
 EFI_PIX_KEY = "544d62f5-c205-483a-9e98-9fd8e7dac63e"
 EFI_CERT_PATH = BASE_DIR / "certs" / "efi-cert.pem"
+
+# Logs no Render
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "stream": sys.stdout,
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "DEBUG" if DEBUG else "INFO",
+    },
+}
+
 
 
 
