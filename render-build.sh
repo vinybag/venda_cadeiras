@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 # render-build.sh
 
-echo "=== Rodando collectstatic ==="
-python manage.py collectstatic --noinput
+# Falhar em caso de erro
+set -o errexit  
 
-echo "=== Rodando migrations ==="
+echo "=== Rodando migrações ==="
 python manage.py migrate --noinput
 
-echo "=== Carregando assentos ==="
-python manage.py loaddata assentos_completos.json || echo "Fixture não encontrada"
+echo "=== Coletando arquivos estáticos ==="
+python manage.py collectstatic --noinput
+
+echo "=== Carregando assentos do fixture ==="
+python manage.py loaddata ingressos/fixtures/assentos_completos.json || echo "⚠️ Nenhum assento carregado (pode já existir)"
+
+echo "=== Build finalizado com sucesso ==="
+
