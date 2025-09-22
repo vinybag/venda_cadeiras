@@ -17,12 +17,7 @@ from django.http import JsonResponse
 def mapa_assentos(request: HttpRequest) -> HttpResponse:
     # limpar reservas vencidas
     Compra.objects.filter(status="pendente", reservado_ate__lt=now()).update(status="cancelado")
-
-    json_path = os.path.join(settings.BASE_DIR, 'assentos_completos.json')
-
-    with open(json_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
+    
     largura_exibida: int = 800
     img_path = os.path.join(settings.BASE_DIR, 'ingressos', 'static', 'ingressos', 'MAPA.png')
 
@@ -31,12 +26,9 @@ def mapa_assentos(request: HttpRequest) -> HttpResponse:
         escala = largura_exibida / largura_original
 
     assentos = []
-    for item in data:
-        fields = item['fields']
-        assento_obj = Assento.objects.get(pk=item['pk'])
-
+    for assento_obj in Assento.objects.all():
         # escala das coordenadas
-        coords = [int(float(x) * escala) for x in fields['coords'].split(',')]
+        coords = [int(float(x) * escala) for x in assento_obj.coords.split(',')]
 
         # 👇 garante que rect tenha tamanho mínimo
         if len(coords) == 4:
@@ -56,8 +48,8 @@ def mapa_assentos(request: HttpRequest) -> HttpResponse:
             coords = [x1, y1, x2, y2]
 
         assentos.append({
-            'pk': item['pk'],
-            'nome': fields['nome'],
+            'pk': assento_obj.pk,
+            'nome': assento_obj.nome,
             'coords_esc': ','.join(map(str, coords)),
             'ocupado': assento_obj.ocupado,
         })
