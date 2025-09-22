@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+# Fail on error
 set -o errexit  
 
-pip install -r requirements.txt
-
+echo "===> Rodando collectstatic"
 python manage.py collectstatic --noinput
-python manage.py migrate
+
+echo "===> Rodando migrations"
+python manage.py migrate --noinput

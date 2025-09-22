@@ -68,19 +68,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'venda_cadeiras.wsgi.application'
 
-# Banco de dados
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+# Se houver DATABASE_URL no ambiente (Render), usa ele
 _db_url = os.environ.get("DATABASE_URL")
 if _db_url:
     DATABASES["default"] = dj_database_url.parse(
         _db_url,
         conn_max_age=600,
-        ssl_require=True,  # 🚨 coloque True no Postgres do Render
+        ssl_require=True,  # ✅ coloque True aqui
     )
 
 # Validação de senha
