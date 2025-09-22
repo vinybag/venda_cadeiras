@@ -1,1 +1,1 @@
-web: gunicorn venda_cadeiras.wsgi --log-file -
+web: gunicorn venda_cadeiras.wsgi:application --bind 0.0.0.0:$PORT
