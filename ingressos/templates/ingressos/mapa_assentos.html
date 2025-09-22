@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de Assentos</title>
+    <style>
+        area {
+            cursor: pointer;
+        }
+        area.bloqueado {
+            pointer-events: none; /* não permite clicar */
+            cursor: not-allowed;  /* cursor de bloqueado */
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa de Assentos</h1>
+
+    
+
+    <div class="mapa-container">
+        <img src="{% static 'ingressos/MAPA.png' %}" 
+             usemap="#mapa" 
+             alt="Mapa de assentos" 
+             width="{{ largura_exibida }}">
+
+        <map name="mapa">
+    {% for assento in assentos %}
+        <area shape="rect"
+      coords="{{ assento.coords_esc }}"
+      {% if not assento.ocupado %}
+          href="{% url 'detalhe_assento' assento.pk %}"
+          title="Clique para reservar o assento {{ assento.nome }}"
+      {% else %}
+          title="Assento {{ assento.nome }} indisponível"
+      {% endif %}
+      class="{% if assento.ocupado %}bloqueado{% endif %}">
+    {% endfor %}
+</map>
+
+    </div>
+</body>
+</html>

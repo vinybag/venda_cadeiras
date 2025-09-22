@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de Ingresso</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .ok { color: green; font-size: 1.5em; font-weight: bold; }
+        .erro { color: red; font-size: 1.5em; font-weight: bold; }
+    </style>
+</head>
+<body>
+    {% if valido %}
+        <p class="ok">{{ mensagem }}</p>
+        <p>Nome: {{ compra.nome }}</p>
+        <p>Email: {{ compra.email }}</p>
+        <p>WhatsApp: {{ compra.whatsapp }}</p>
+    {% else %}
+        <p class="erro">{{ mensagem }}</p>
+    {% endif %}
+</body>
+</html>

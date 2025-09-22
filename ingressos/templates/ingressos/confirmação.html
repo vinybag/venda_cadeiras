@@ -1,0 +1,12 @@
+<h1>Compra confirmada!</h1>
+
+<p>Assento: {{ compra.assento.numero }}</p>
+<p>Nome: {{ compra.nome }}</p>
+<p>Email: {{ compra.email }}</p>
+
+<h2>Pagamento Pix</h2>
+<p>Copie e cole no seu app bancário:</p>
+<textarea readonly style="width:100%; height:100px;">{{ compra.pix_copia_cola }}</textarea>
+
+<h3>Ou escaneie o QR Code:</h3>
+<img src="{{ compra.qr_code.url }}" alt="QR Code Pix">

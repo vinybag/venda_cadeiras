@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingresso Confirmado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+        .qrcode {
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎟️ Ingresso Confirmado!</h1>
+
+    <p><strong>Nome:</strong> {{ compra.nome }}</p>
+    <p><strong>Assento:</strong> {{ compra.assento.nome }}</p>
+
+    <!-- Prévia do QR Code -->
+    <div class="qrcode">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Ingresso%20{{ compra.id }}%20-%20Assento%20{{ compra.assento.nome }}" 
+             alt="QR Code do ingresso">
+    </div>
+
+    <!-- Botão para baixar o PDF -->
+    <h1>Compra confirmada!</h1>
+<p>Obrigado, {{ compra.nome }}! Seu assento é <strong>{{ compra.assento.nome }}</strong>.</p>
+
+<p>Agora você pode baixar seu ingresso:</p>
+
+<a href="{% url 'baixar_ingresso' compra.id %}" class="btn btn-success">
+    📥 Baixar Ingresso (PDF)
+</a>
+
+    <p>Apresente este QR Code na entrada do evento.</p>
+</body>
+</html>
+

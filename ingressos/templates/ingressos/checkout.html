@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Pagamento do Ingresso</h1>
+
+    <p>Assento: {{ compra.assento.numero }}</p>
+    <p>Nome: {{ compra.nome }}</p>
+    <p>Email: {{ compra.email }}</p>
+
+    <h3>QR Code para pagamento:</h3>
+    <p>{{ compra.qr_code }}</p>
+</body>
+</html>

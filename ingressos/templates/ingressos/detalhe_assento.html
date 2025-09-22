@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva do Assento</title>
+    <style>
+        #contador {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: red;
+        }
+        .cancelar-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #c62828;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cancelar-btn:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reserva do Assento {{ assento.nome }}</h1>
+
+    <p>Preencha seus dados para avançar para o pagamento.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <p><label>Nome:</label> <input type="text" name="nome" required></p>
+        <p><label>Email:</label> <input type="email" name="email" required></p>
+        <p><label>WhatsApp:</label> <input type="text" name="whatsapp" required></p>
+
+        <button type="submit">Avançar para pagamento</button>
+    </form>
+
+    <p>⚠️ O assento ficará reservado por <span id="contador"></span></p>
+
+<a href="{% url 'cancelar_reserva' compra.id %}" class="cancelar-btn">Cancelar Reserva</a>
+
+<script>
+    const expiraEm = new Date("{{ compra.reservado_ate|date:'Y-m-d H:i:s' }}").getTime();
+
+    function atualizarContador() {
+        const agora = new Date().getTime();
+        const diferenca = expiraEm - agora;
+
+        if (diferenca <= 0) {
+            document.getElementById("contador").innerHTML = "RESERVA EXPIRADA";
+            alert("Sua reserva expirou! O assento voltou para o mapa.");
+            window.location.href = "/";
+            return;
+        }
+
+        const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+        document.getElementById("contador").innerHTML =
+            minutos + "m " + (segundos < 10 ? "0" : "") + segundos + "s";
+    }
+
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+</script>
+</body>
+</html>
