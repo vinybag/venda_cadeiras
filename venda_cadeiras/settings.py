@@ -80,7 +80,7 @@ if _db_url:
     DATABASES["default"] = dj_database_url.parse(
         _db_url,
         conn_max_age=600,
-        ssl_require=False,  # mude para True se o Postgres exigir SSL
+        ssl_require=True,  # 🚨 coloque True no Postgres do Render
     )
 
 # Validação de senha
