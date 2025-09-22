@@ -11,6 +11,7 @@ from .forms import CompraForm
 from .utils_pix import gerar_pix
 from .utils_ingresso import gerar_pdf_ingresso
 from django.http import FileResponse, Http404
+from django.http import JsonResponse
 
 
 def mapa_assentos(request: HttpRequest) -> HttpResponse:
@@ -232,7 +233,8 @@ def validar_ingresso(request, compra_id):
         "mensagem": f"Ingresso válido! Assento: {compra.assento.nome}"
     })
 
-
+def check_assentos(request):
+    return JsonResponse({"total_assentos": Assento.objects.count()})
 
 
 
