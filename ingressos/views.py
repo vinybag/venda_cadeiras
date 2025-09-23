@@ -6,7 +6,7 @@ from PIL import Image
 from django.http import HttpRequest, HttpResponse
 from datetime import timedelta
 from django.utils.timezone import now
-from .models import Assento, Compra
+from .models import Assento, Compra, Configuracao
 from .forms import CompraForm
 from .utils_pix import gerar_pix
 from .utils_ingresso import gerar_pdf_ingresso
@@ -88,6 +88,10 @@ def detalhe_assento(request, pk):
             reservado_ate=now() + timedelta(minutes=10)
         )
 
+    # pega o valor do ingresso a partir da configuração
+    config = Configuracao.objects.first()
+    valor_ingresso = config.valor_ingresso if config else 50.00  # fallback se não existir
+
     if request.method == "POST":
         compra.nome = request.POST.get("nome")
         compra.email = request.POST.get("email")
@@ -98,7 +102,8 @@ def detalhe_assento(request, pk):
 
     return render(request, "ingressos/detalhe_assento.html", {
         "assento": assento,
-        "compra": compra
+        "compra": compra,
+        "valor_ingresso": valor_ingresso
     })
 
 

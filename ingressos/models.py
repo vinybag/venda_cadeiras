@@ -41,3 +41,14 @@ class Compra(models.Model):
     )
     pix_qrcode = models.ImageField(upload_to="qrcodes", blank=True, null=True)
     pix_copia_cola = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Compra {self.id} - {self.assento.nome}"
+
+
+class Configuracao(models.Model):
+    valor_ingresso = models.DecimalField(max_digits=8, decimal_places=2, default=50.00)
+
+    def __str__(self):
+        return f"Configuração (Valor atual: R$ {self.valor_ingresso})"
+
