@@ -1,13 +1,11 @@
 from django.utils.timezone import now
 from django.db import models
-import qrcode
-from io import BytesIO
-from django.core.files import File
 from datetime import timedelta
-from django.utils.timezone import now
+
 
 def default_reserva():
     return now() + timedelta(minutes=10)
+
 
 class Assento(models.Model):
     nome = models.CharField(max_length=100)
@@ -39,11 +37,12 @@ class Compra(models.Model):
         choices=[("pendente", "Pendente"), ("pago", "Pago"), ("cancelado", "Cancelado")],
         default="pendente"
     )
+    valor = models.DecimalField(max_digits=8, decimal_places=2, default=50.00)  # 👈 Novo campo
     pix_qrcode = models.ImageField(upload_to="qrcodes", blank=True, null=True)
     pix_copia_cola = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"Compra {self.id} - {self.assento.nome}"
+        return f"Compra {self.id} - {self.assento.nome} (R$ {self.valor})"
 
 
 class Configuracao(models.Model):
@@ -51,4 +50,5 @@ class Configuracao(models.Model):
 
     def __str__(self):
         return f"Configuração (Valor atual: R$ {self.valor_ingresso})"
+
 

@@ -31,14 +31,15 @@
     <p><strong>WhatsApp:</strong> {{ compra.whatsapp }}</p>
     <p><strong>Assento:</strong> {{ compra.assento.nome }}</p>
 
-    <h2>Valor: R$ 50,00</h2>
+    <!-- ✅ Agora busca o valor salvo na compra -->
+    <h2>Valor: R$ {{ compra.valor }}</h2>
 
     <p>⚠️ O assento ficará reservado por <span id="contador"></span></p>
 
     <!-- Botão de simulação de pagamento -->
     <form method="get" action="{% url 'pagamento_pix' compra.id %}">
-    <button type="submit">Pagar Agora</button>
-</form>
+        <button type="submit">Pagar Agora</button>
+    </form>
 
     <!-- Botão de cancelar reserva -->
     <a href="{% url 'cancelar_reserva' compra.id %}" class="cancelar-btn">❌ Cancelar Reserva</a>
@@ -70,6 +71,7 @@
 </script>
 </body>
 </html>
+
 
 
 
