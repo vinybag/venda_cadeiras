@@ -19,5 +19,9 @@ else
   echo "⚠️ Arquivo de assentos não encontrado, pulando loaddata"
 fi
 
+echo "=== Importando superusuário ==="
+python manage.py loaddata superuser.json || echo "⚠️ Nenhum superusuário importado"
+
 echo "=== Build finalizado com sucesso ==="
+
 

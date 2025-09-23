@@ -17,9 +17,7 @@
 </head>
 <body>
     <h1>Mapa de Assentos</h1>
-
     
-
     <div class="mapa-container">
         <img src="{% static 'ingressos/MAPA.png' %}" 
              usemap="#mapa" 
@@ -27,19 +25,21 @@
              width="{{ largura_exibida }}">
 
         <map name="mapa">
-    {% for assento in assentos %}
-        <area shape="rect"
-      coords="{{ assento.coords_esc }}"
-      {% if not assento.ocupado %}
-          href="{% url 'detalhe_assento' assento.pk %}"
-          title="Clique para reservar o assento {{ assento.nome }}"
-      {% else %}
-          title="Assento {{ assento.nome }} indisponível"
-      {% endif %}
-      class="{% if assento.ocupado %}bloqueado{% endif %}">
-    {% endfor %}
-</map>
-
+            {% for assento in assentos %}
+                <area shape="rect"
+                      coords="{{ assento.coords_esc }}"
+                      {% if not assento.ocupado %}
+                          href="{% url 'detalhe_assento' assento.pk %}"
+                          alt="Assento {{ assento.nome }}"
+                          title="Clique para reservar o assento {{ assento.nome }}"
+                      {% else %}
+                          alt="Assento {{ assento.nome }} indisponível"
+                          title="Assento {{ assento.nome }} indisponível"
+                      {% endif %}
+                      class="{% if assento.ocupado %}bloqueado{% endif %}">
+            {% endfor %}
+        </map>
     </div>
 </body>
 </html>
+
