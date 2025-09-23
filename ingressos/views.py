@@ -12,12 +12,20 @@ from .utils_pix import gerar_pix
 from .utils_ingresso import gerar_pdf_ingresso
 from django.http import FileResponse, Http404
 from django.http import JsonResponse
+from django.core.management import call_command
 
 
 def mapa_assentos(request: HttpRequest) -> HttpResponse:
     # limpar reservas vencidas
     Compra.objects.filter(status="pendente", reservado_ate__lt=now()).update(status="cancelado")
-    
+
+    # 🔥 se não houver assentos no banco, carrega do fixture
+    if Assento.objects.count() == 0:
+        try:
+            call_command("loaddata", "ingressos/fixtures/assentos_completos.json")
+        except Exception as e:
+            print("⚠️ Erro ao carregar assentos:", e)
+
     largura_exibida: int = 800
     img_path = os.path.join(settings.BASE_DIR, 'ingressos', 'static', 'ingressos', 'MAPA.png')
 
