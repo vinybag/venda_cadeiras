@@ -20,7 +20,8 @@ else
 fi
 
 echo "=== Importando superusuário ==="
-python manage.py loaddata superuser.json || echo "⚠️ Nenhum superusuário importado"
+python manage.py shell -c "from django.contrib.auth import get_user_model; User=get_user_model(); User.objects.filter(is_superuser=True).delete()" || echo "⚠️ Nenhum usuário para remover"
+python manage.py loaddata ingressos/fixtures/superuser.json || echo "⚠️ Nenhum superusuário importado"
 
 echo "=== Build finalizado com sucesso ==="
 
