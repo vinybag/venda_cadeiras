@@ -8,11 +8,11 @@ from efipay import EfiPay
 def gerar_pix(compra):
     # 🔑 Credenciais (produção: sandbox=False)
     credentials = {
-        "client_id": settings.EFI_CLIENT_ID,
-        "client_secret": settings.EFI_CLIENT_SECRET,
-        "certificate": str(settings.EFI_CERT_PATH),
-        "sandbox": False,  # 👈 já que você usa chaves de PRODUÇÃO
-    }
+    "client_id": settings.EFI_CLIENT_ID,
+    "client_secret": settings.EFI_CLIENT_SECRET,
+    "certificate": settings.EFI_CERT_PATH,  # <- usa o caminho vindo do ambiente
+    "sandbox": False,  # Produção
+}
 
     efipay = EfiPay(credentials)
 

@@ -11,7 +11,6 @@ echo "=== Coletando arquivos estáticos ==="
 python manage.py collectstatic --noinput
 
 echo "=== Carregando assentos do fixture ==="
-# Tentamos carregar os assentos apenas se o arquivo existir
 if [ -f "ingressos/fixtures/assentos_completos.json" ]; then
   python manage.py loaddata ingressos/fixtures/assentos_completos.json || \
   echo "⚠️ Nenhum assento carregado (eles podem já existir no banco)"
@@ -24,5 +23,6 @@ python manage.py shell -c "from django.contrib.auth import get_user_model; User=
 python manage.py loaddata ingressos/fixtures/superuser.json || echo "⚠️ Nenhum superusuário importado"
 
 echo "=== Build finalizado com sucesso ==="
+
 
 

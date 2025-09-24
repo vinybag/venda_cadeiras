@@ -108,10 +108,12 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configuração Efí (Pix)
-EFI_CLIENT_ID = "Client_Id_bb96cf1730689c416ead140de33487918ac8a52e"
-EFI_CLIENT_SECRET = "Client_Secret_8a2fb8f04428a7150a6ee62661c913d5949d4436"
-EFI_PIX_KEY = "544d62f5-c205-483a-9e98-9fd8e7dac63e"
-EFI_CERT_PATH = BASE_DIR / "certs" / "efi-cert.pem"
+EFI_CLIENT_ID = os.getenv("EFI_CLIENT_ID", "Client_Id_bb96cf1730689c416ead140de33487918ac8a52e")
+EFI_CLIENT_SECRET = os.getenv("EFI_CLIENT_SECRET", "Client_Secret_8a2fb8f04428a7150a6ee62661c913d5949d4436")
+EFI_PIX_KEY = os.getenv("EFI_PIX_KEY", "544d62f5-c205-483a-9e98-9fd8e7dac63e")
+
+# Caminho do certificado
+EFI_CERT_PATH = os.getenv("EFI_CERT_PATH", str(BASE_DIR / "efipay.pem"))
 
 # Logs no Render
 LOGGING = {
