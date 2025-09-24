@@ -18,7 +18,7 @@
     <p><strong>WhatsApp:</strong> {{ compra.whatsapp }}</p>
     <p><strong>Assento:</strong> {{ compra.assento.nome }}</p>
 
-    <h2>Valor: R$ 50,00</h2>
+    <h2>Valor: R$ {{ compra.valor|floatformat:2 }}</h2>
 
     <p>O assento ficará reservado por <span id="contador"></span></p>
 
