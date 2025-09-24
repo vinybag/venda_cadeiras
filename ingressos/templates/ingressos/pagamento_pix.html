@@ -37,8 +37,11 @@
 
     <script>
         const expiraEm = new Date("{{ compra.reservado_ate|date:'Y-m-d H:i:s' }}").getTime();
+        let contadorAtivo = true; // 🔑 controla se o contador deve continuar rodando
 
         function atualizarContador() {
+            if (!contadorAtivo) return; // para o contador quando o pagamento for confirmado
+
             const agora = new Date().getTime();
             const diferenca = expiraEm - agora;
 
@@ -56,9 +59,25 @@
                 minutos + "m " + (segundos < 10 ? "0" : "") + segundos + "s";
         }
 
+        // 🔄 Verificar status do pagamento no backend
+        function verificarStatus() {
+            fetch("{% url 'verificar_status' compra.id %}")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "pago") {
+                        contadorAtivo = false; // para o contador
+                        alert("✅ Pagamento confirmado com sucesso!");
+                        window.location.href = "{% url 'baixar_ingresso' compra.id %}";
+                    }
+                })
+                .catch(error => console.error("Erro ao verificar status:", error));
+        }
+
         atualizarContador();
-        setInterval(atualizarContador, 1000);
+        setInterval(atualizarContador, 1000); // contador a cada 1s
+        setInterval(verificarStatus, 5000); // checa pagamento a cada 5s
     </script>
 </body>
 </html>
+
 

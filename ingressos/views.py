@@ -218,6 +218,10 @@ def validar_ingresso(request, compra_id):
 def check_assentos(request):
     return JsonResponse({"total_assentos": Assento.objects.count()})
 
+def verificar_status_pagamento(request, compra_id):
+    compra = Compra.objects.get(id=compra_id)
+    return JsonResponse({"status": compra.status})
+
 
 
 
