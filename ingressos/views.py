@@ -12,6 +12,9 @@ from .utils_pix import gerar_pix
 from .utils_ingresso import gerar_pdf_ingresso
 from django.http import FileResponse, Http404, JsonResponse
 from django.core.management import call_command
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from django.views.decorators.http import require_POST
 
 
 def mapa_assentos(request: HttpRequest) -> HttpResponse:
@@ -221,6 +224,29 @@ def check_assentos(request):
 def verificar_status_pagamento(request, compra_id):
     compra = Compra.objects.get(id=compra_id)
     return JsonResponse({"status": compra.status})
+
+@csrf_exempt  # porque o banco não manda CSRF
+@require_POST
+def webhook_pix(request):
+    try:
+        data = json.loads(request.body.decode("utf-8"))
+        pix_list = data.get("pix", [])
+
+        for pix in pix_list:
+            txid = pix.get("txid")
+            if txid and txid.startswith("compra"):
+                compra_id = txid.replace("compra", "")
+                try:
+                    compra = Compra.objects.get(id=compra_id)
+                    compra.status = "pago"
+                    compra.save()
+                    gerar_pdf_ingresso(compra)  # já gera o ingresso
+                except Compra.DoesNotExist:
+                    print(f"⚠️ Compra não encontrada para txid={txid}")
+        return JsonResponse({"status": "ok"})
+    except Exception as e:
+        print("❌ Erro no webhook PIX:", str(e))
+        return JsonResponse({"status": "erro"}, status=400)
 
 
 

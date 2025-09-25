@@ -131,6 +131,7 @@ LOGGING = {
     },
 }
 
+print("🔑 Usando certificado:", EFI_CERT_PATH)
 
 
 
