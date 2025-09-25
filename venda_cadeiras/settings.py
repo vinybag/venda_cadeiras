@@ -113,7 +113,7 @@ EFI_CLIENT_SECRET = os.getenv("EFI_CLIENT_SECRET", "Client_Secret_8a2fb8f04428a7
 EFI_PIX_KEY = os.getenv("EFI_PIX_KEY", "544d62f5-c205-483a-9e98-9fd8e7dac63e")
 
 # Caminho do certificado
-EFI_CERT_PATH = os.getenv("EFI_CERT_PATH", str(BASE_DIR / "efipay.pem"))
+EFI_CERT_PATH = os.getenv("EFI_CERT_PATH", str(BASE_DIR / "efipay.p12"))
 
 # Logs no Render
 LOGGING = {
