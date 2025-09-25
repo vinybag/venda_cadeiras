@@ -37,10 +37,10 @@
 
     <script>
         const expiraEm = new Date("{{ compra.reservado_ate|date:'Y-m-d H:i:s' }}").getTime();
-        let contadorAtivo = true; // 🔑 controla se o contador deve continuar rodando
+        let contadorAtivo = true; // controla se o contador continua rodando
 
         function atualizarContador() {
-            if (!contadorAtivo) return; // para o contador quando o pagamento for confirmado
+            if (!contadorAtivo) return;
 
             const agora = new Date().getTime();
             const diferenca = expiraEm - agora;
@@ -55,11 +55,11 @@
             const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
             const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
 
-            document.getElementById("contador").innerHTML = 
+            document.getElementById("contador").innerHTML =
                 minutos + "m " + (segundos < 10 ? "0" : "") + segundos + "s";
         }
 
-        // 🔄 Verificar status do pagamento no backend
+        // Verifica o status do pagamento a cada 5 segundos
         function verificarStatus() {
             fetch("{% url 'verificar_status' compra.id %}")
                 .then(response => response.json())
@@ -74,10 +74,11 @@
         }
 
         atualizarContador();
-        setInterval(atualizarContador, 1000); // contador a cada 1s
-        setInterval(verificarStatus, 5000); // checa pagamento a cada 5s
+        setInterval(atualizarContador, 1000); // atualiza contador a cada 1s
+        setInterval(verificarStatus, 5000);   // checa pagamento a cada 5s
     </script>
 </body>
 </html>
+
 
 
