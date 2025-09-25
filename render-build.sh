@@ -22,7 +22,11 @@ echo "=== Importando superusuário ==="
 python manage.py shell -c "from django.contrib.auth import get_user_model; User=get_user_model(); User.objects.filter(is_superuser=True).delete()" || echo "⚠️ Nenhum usuário para remover"
 python manage.py loaddata ingressos/fixtures/superuser.json || echo "⚠️ Nenhum superusuário importado"
 
+echo "=== Registrando webhook PIX ==="
+python manage.py registrar_webhook || echo "⚠️ Falha ao registrar webhook (confira os logs depois do deploy)"
+
 echo "=== Build finalizado com sucesso ==="
+
 
 
 
