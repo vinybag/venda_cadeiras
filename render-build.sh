@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # render-build.sh
 
-# Se der qualquer erro, aborta o build
 set -o errexit  
 
 echo "=== Rodando migrações ==="
@@ -23,7 +22,7 @@ python manage.py shell -c "from django.contrib.auth import get_user_model; User=
 python manage.py loaddata ingressos/fixtures/superuser.json || echo "⚠️ Nenhum superusuário importado"
 
 echo "=== Registrando webhook PIX ==="
-python manage.py registrar_webhook || echo "⚠️ Falha ao registrar webhook (confira os logs depois do deploy)"
+python manage.py registrar_webhook || echo "⚠️ Falha ao registrar webhook, continuar mesmo assim"
 
 echo "=== Build finalizado com sucesso ==="
 
