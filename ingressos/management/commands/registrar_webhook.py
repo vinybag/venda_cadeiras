@@ -7,11 +7,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         credentials = {
-            "client_id": settings.EFI_CLIENT_ID,
-            "client_secret": settings.EFI_CLIENT_SECRET,
-            "certificate": settings.EFI_CERT_PATH,
-            "sandbox": False,
-        }
+    "client_id": settings.EFI_CLIENT_ID,
+    "client_secret": settings.EFI_CLIENT_SECRET,
+    "certificate": settings.EFI_CERT,   # 👈 agora é a tupla (cert, key)
+    "sandbox": settings.EFI_SANDBOX,
+}
         efipay = EfiPay(credentials)
 
         params = {"chave": settings.EFI_PIX_KEY}

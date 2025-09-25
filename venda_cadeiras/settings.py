@@ -111,9 +111,32 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EFI_CLIENT_ID = os.getenv("EFI_CLIENT_ID", "Client_Id_bb96cf1730689c416ead140de33487918ac8a52e")
 EFI_CLIENT_SECRET = os.getenv("EFI_CLIENT_SECRET", "Client_Secret_8a2fb8f04428a7150a6ee62661c913d5949d4436")
 EFI_PIX_KEY = os.getenv("EFI_PIX_KEY", "544d62f5-c205-483a-9e98-9fd8e7dac63e")
+EFI_SANDBOX = os.getenv("EFI_SANDBOX", "False").lower() in ("1", "true", "yes")
 
-# Caminho do certificado
-EFI_CERT_PATH = os.getenv("EFI_CERT_PATH")
+def _pick_file(*candidates):
+    for p in candidates:
+        if p and os.path.exists(p):
+            return p
+    return None
+
+CERT_CANDIDATES = [
+    os.getenv("EFI_CERT_CERT_PATH"),                  # se você quiser setar um env manual
+    "/opt/render/project/src/cert.pem",               # Secret File no Render
+    str(BASE_DIR / "certs" / "cert.pem"),             # dev local
+    str(BASE_DIR / "cert.pem"),
+]
+KEY_CANDIDATES = [
+    os.getenv("EFI_CERT_KEY_PATH"),
+    "/opt/render/project/src/key.pem",
+    str(BASE_DIR / "certs" / "key.pem"),
+    str(BASE_DIR / "key.pem"),
+]
+
+EFI_CERT_CERT_PATH = _pick_file(*CERT_CANDIDATES)
+EFI_CERT_KEY_PATH  = _pick_file(*KEY_CANDIDATES)
+
+# Cert em formato aceito por requests: tupla (cert, key)
+EFI_CERT = (EFI_CERT_CERT_PATH, EFI_CERT_KEY_PATH)
 
 # Logs no Render
 LOGGING = {
@@ -131,7 +154,7 @@ LOGGING = {
     },
 }
 
-print("🔑 Usando certificado:", EFI_CERT_PATH)
+print("🔑 Usando certificado:", EFI_CERT)
 
 
 
