@@ -1,21 +1,19 @@
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from efipay import EfiPay
+from ingressos.utils_pix import get_efipay_instance  # ✅ import absoluto
 
 class Command(BaseCommand):
     help = "Registra/atualiza o webhook PIX na Efí"
 
     def handle(self, *args, **options):
-        credentials = {
-    "client_id": settings.EFI_CLIENT_ID,
-    "client_secret": settings.EFI_CLIENT_SECRET,
-    "certificate": settings.EFI_CERT,   # 👈 agora é a tupla (cert, key)
-    "sandbox": settings.EFI_SANDBOX,
-}
-        efipay = EfiPay(credentials)
+        efipay = get_efipay_instance()
 
         params = {"chave": settings.EFI_PIX_KEY}
         body = {"webhookUrl": "https://venda-cadeiras.onrender.com/webhook/pix/"}
 
-        resp = efipay.pix_config_webhook(params=params, body=body)
-        self.stdout.write(self.style.SUCCESS(f"Webhook configurado: {resp}"))
+        try:
+            resp = efipay.pix_config_webhook(params=params, body=body)
+            self.stdout.write(self.style.SUCCESS(f"✅ Webhook configurado: {resp}"))
+        except Exception as e:
+            self.stdout.write(self.style.ERROR(f"❌ Falha ao registrar webhook: {e}"))
+
