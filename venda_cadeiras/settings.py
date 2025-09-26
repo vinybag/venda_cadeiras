@@ -113,6 +113,8 @@ EFI_CLIENT_SECRET = os.getenv("EFI_CLIENT_SECRET", "Client_Secret_8a2fb8f04428a7
 EFI_PIX_KEY = os.getenv("EFI_PIX_KEY", "544d62f5-c205-483a-9e98-9fd8e7dac63e")
 EFI_SANDBOX = os.getenv("EFI_SANDBOX", "False").lower() in ("1", "true", "yes")
 
+# settings.py (trecho relevante)
+
 def _pick_file(*candidates):
     for p in candidates:
         if p and os.path.exists(p):
@@ -120,23 +122,14 @@ def _pick_file(*candidates):
     return None
 
 CERT_CANDIDATES = [
-    os.getenv("EFI_CERT_CERT_PATH"),                  # se você quiser setar um env manual
-    "/opt/render/project/src/cert.pem",               # Secret File no Render
-    str(BASE_DIR / "certs" / "cert.pem"),             # dev local
-    str(BASE_DIR / "cert.pem"),
-]
-KEY_CANDIDATES = [
-    os.getenv("EFI_CERT_KEY_PATH"),
-    "/opt/render/project/src/key.pem",
-    str(BASE_DIR / "certs" / "key.pem"),
-    str(BASE_DIR / "key.pem"),
+    os.getenv("EFI_CERT_PATH"),                  # via variável de ambiente
+    "/opt/render/project/src/efipay.pem",        # Secret File no Render
+    str(BASE_DIR / "certs" / "efipay.pem"),      # dev local
+    str(BASE_DIR / "efipay.pem"),
 ]
 
-EFI_CERT_CERT_PATH = _pick_file(*CERT_CANDIDATES)
-EFI_CERT_KEY_PATH  = _pick_file(*KEY_CANDIDATES)
+EFI_CERT = _pick_file(*CERT_CANDIDATES)
 
-# Cert em formato aceito por requests: tupla (cert, key)
-EFI_CERT = (EFI_CERT_CERT_PATH, EFI_CERT_KEY_PATH)
 
 # Logs no Render
 LOGGING = {
@@ -155,6 +148,7 @@ LOGGING = {
 }
 
 print("🔑 Usando certificado:", EFI_CERT)
+
 
 
 

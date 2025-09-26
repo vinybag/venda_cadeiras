@@ -3,27 +3,35 @@ from io import BytesIO
 from django.core.files.base import ContentFile
 from django.conf import settings
 from efipay import EfiPay
+from .utils_pix import get_efipay_instance
+
+
+def get_efipay_instance():
+    credentials = {
+        "client_id": settings.EFI_CLIENT_ID,
+        "client_secret": settings.EFI_CLIENT_SECRET,
+        "certificate": settings.EFI_CERT,   # agora é só uma string (caminho do .pem)
+        "sandbox": settings.EFI_SANDBOX,
+    }
+    return EfiPay(credentials)
+
 
 
 def gerar_pix(compra):
-    credentials = {
-    "client_id": settings.EFI_CLIENT_ID,
-    "client_secret": settings.EFI_CLIENT_SECRET,
-    "certificate": settings.EFI_CERT,   # 👈 agora é a tupla (cert, key)
-    "sandbox": settings.EFI_SANDBOX,
-}
-
-    efipay = EfiPay(credentials)
+    """
+    Cria uma cobrança PIX imediata para a compra e retorna o QRCode + copia e cola.
+    """
+    efipay = get_efipay_instance()
 
     txid = f"compra{compra.id}"
 
-    # Valor vem da configuração salva no admin
+    # Valor definido na compra ou fallback
     valor = str(compra.valor) if hasattr(compra, "valor") else "50.00"
 
     body = {
         "calendario": {"expiracao": 600},
         "devedor": {
-            "cpf": "12345678909",  # exemplo. pode ser fixo se não quiser CPF
+            "cpf": "12345678909",  # exemplo. Se não quiser coletar CPF, pode manter fixo
             "nome": compra.nome or "Cliente",
         },
         "valor": {"original": valor},
@@ -33,7 +41,9 @@ def gerar_pix(compra):
 
     try:
         # Criar cobrança PIX imediata
-        response = efipay.pix_create_immediate_charge(params={"txid": txid}, body=body)
+        response = efipay.pix_create_immediate_charge(
+            params={"txid": txid}, body=body
+        )
 
         # Gerar QR Code baseado na cobrança
         qrcode_response = efipay.pix_generate_qrcode(
@@ -56,4 +66,5 @@ def gerar_pix(compra):
         # log no console (Render mostra no log)
         print("❌ Erro ao gerar PIX:", str(e))
         raise
+
 
