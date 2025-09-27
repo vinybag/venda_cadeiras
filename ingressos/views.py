@@ -245,46 +245,36 @@ def verificar_status_pagamento(request, compra_id):
     except Compra.DoesNotExist:
         return JsonResponse({"status": "erro", "mensagem": "Compra não encontrada"}, status=404)
 
-
-
 @csrf_exempt
 @require_POST
 def webhook_pix(request):
-    """
-    Endpoint chamado pela Efí quando um PIX é confirmado.
-    """
     try:
-        payload = request.body.decode("utf-8")
-        logger.info(f"📩 Webhook recebido: {payload}")
+        print("📩 Webhook recebido RAW:", request.body)  # log bruto
+        data = json.loads(request.body.decode("utf-8"))
+        print("📩 Webhook JSON parseado:", data)
 
-        data = json.loads(payload)
         pix_list = data.get("pix", [])
-
-        if not pix_list:
-            logger.warning("⚠️ Webhook recebido sem lista de PIX")
-            return JsonResponse({"status": "ignored"})
-
         for pix in pix_list:
             txid = pix.get("txid")
-            valor = pix.get("valor")
-            logger.info(f"🔎 Pagamento PIX confirmado: txid={txid}, valor={valor}")
+            valor = pix.get("valor", {}).get("original")
+            print(f"🔎 Encontrado PIX txid={txid}, valor={valor}")
 
             if txid and txid.startswith("compra"):
                 compra_id = txid.replace("compra", "")
                 try:
                     compra = Compra.objects.get(id=compra_id)
                     compra.status = "pago"
-                    compra.save(update_fields=["status"])
-                    gerar_pdf_ingresso(compra)  # já gera o ingresso
-                    logger.info(f"✅ Compra {compra.id} atualizada como paga")
+                    compra.save()
+                    gerar_pdf_ingresso(compra)
+                    print(f"✅ Pagamento confirmado para compra {compra.id}")
                 except Compra.DoesNotExist:
-                    logger.error(f"❌ Nenhuma compra encontrada com txid={txid}")
+                    print(f"⚠️ Compra não encontrada para txid={txid}")
 
         return JsonResponse({"status": "ok"})
-
     except Exception as e:
-        logger.exception(f"❌ Erro no webhook PIX: {str(e)}")
-        return JsonResponse({"status": "erro", "detalhe": str(e)}, status=400)
+        print("❌ Erro no webhook PIX:", str(e))
+        return JsonResponse({"status": "erro"}, status=400)
+
 
 
 

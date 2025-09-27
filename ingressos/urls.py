@@ -13,5 +13,5 @@ urlpatterns = [
     path("validar/<int:compra_id>/", views.validar_ingresso, name="validar_ingresso"),
     path("check-assentos/", views.check_assentos, name="check_assentos"),
     path("verificar-status/<int:compra_id>/", views.verificar_status_pagamento, name="verificar_status"),
-    path("webhook/pix", views.webhook_pix, name="webhook_pix"),
+    path("webhook/pix/", views.webhook_pix, name="webhook_pix"),
 ]
