@@ -38,7 +38,7 @@ class Command(BaseCommand):
                 "x-skip-mtls-checking": "true",  # 👈 ignora mTLS
             }
             body = {
-            "webhookUrl": "https://venda-cadeiras.onrender.com/webhook"
+            "webhookUrl": "https://venda-cadeiras.onrender.com/webhook/pix"
             }
 
             # 3. Faz a requisição PUT
