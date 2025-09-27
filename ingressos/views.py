@@ -15,6 +15,9 @@ from django.core.management import call_command
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.views.decorators.http import require_POST
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def mapa_assentos(request: HttpRequest) -> HttpResponse:
@@ -221,32 +224,68 @@ def validar_ingresso(request, compra_id):
 def check_assentos(request):
     return JsonResponse({"total_assentos": Assento.objects.count()})
 
-def verificar_status_pagamento(request, compra_id):
-    compra = Compra.objects.get(id=compra_id)
-    return JsonResponse({"status": compra.status})
 
-@csrf_exempt  # porque o banco não manda CSRF
+def verificar_status_pagamento(request, compra_id):
+    """
+    Endpoint chamado via AJAX a cada 5s pela tela de pagamento.
+    Retorna o status atualizado da compra.
+    """
+    try:
+        compra = Compra.objects.get(id=compra_id)
+
+        response = {
+            "status": compra.status,
+        }
+
+        if compra.status == "pago":
+            response["redirect_url"] = f"/baixar-ingresso/{compra.id}/"
+
+        return JsonResponse(response)
+
+    except Compra.DoesNotExist:
+        return JsonResponse({"status": "erro", "mensagem": "Compra não encontrada"}, status=404)
+
+
+
+@csrf_exempt
 @require_POST
 def webhook_pix(request):
+    """
+    Endpoint chamado pela Efí quando um PIX é confirmado.
+    """
     try:
-        data = json.loads(request.body.decode("utf-8"))
+        payload = request.body.decode("utf-8")
+        logger.info(f"📩 Webhook recebido: {payload}")
+
+        data = json.loads(payload)
         pix_list = data.get("pix", [])
+
+        if not pix_list:
+            logger.warning("⚠️ Webhook recebido sem lista de PIX")
+            return JsonResponse({"status": "ignored"})
 
         for pix in pix_list:
             txid = pix.get("txid")
+            valor = pix.get("valor")
+            logger.info(f"🔎 Pagamento PIX confirmado: txid={txid}, valor={valor}")
+
             if txid and txid.startswith("compra"):
                 compra_id = txid.replace("compra", "")
                 try:
                     compra = Compra.objects.get(id=compra_id)
                     compra.status = "pago"
-                    compra.save()
+                    compra.save(update_fields=["status"])
                     gerar_pdf_ingresso(compra)  # já gera o ingresso
+                    logger.info(f"✅ Compra {compra.id} atualizada como paga")
                 except Compra.DoesNotExist:
-                    print(f"⚠️ Compra não encontrada para txid={txid}")
+                    logger.error(f"❌ Nenhuma compra encontrada com txid={txid}")
+
         return JsonResponse({"status": "ok"})
+
     except Exception as e:
-        print("❌ Erro no webhook PIX:", str(e))
-        return JsonResponse({"status": "erro"}, status=400)
+        logger.exception(f"❌ Erro no webhook PIX: {str(e)}")
+        return JsonResponse({"status": "erro", "detalhe": str(e)}, status=400)
+
 
 
 
