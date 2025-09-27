@@ -27,7 +27,12 @@ echo "=== Registrando webhook PIX ==="
 python manage.py registrar_webhook || \
 echo "⚠️ Falha ao registrar webhook, continuar mesmo assim"
 
+echo "=== Consultando webhook PIX configurado ==="
+python manage.py consultar_webhook || \
+echo "⚠️ Não foi possível consultar webhook"
+
 echo "=== Build finalizado com sucesso ==="
+
 
 
 
