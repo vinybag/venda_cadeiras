@@ -19,7 +19,7 @@ def gerar_pix(compra):
     body = {
         "calendario": {"expiracao": 600},  # expira em 10 minutos
         "devedor": {
-            "cpf": "12345678909",  # ⚠️ pode ser fictício, se não for obrigatório pela Efí
+            "cpf": "12345678909",  # ⚠️ fictício (só se for obrigatório)
             "nome": compra.nome or "Cliente",
         },
         "valor": {"original": valor},
@@ -35,9 +35,15 @@ def gerar_pix(compra):
         )
 
         # gera o QR Code a partir da cobrança
-        qrcode_response = efipay.pix_generate_qrcode(
-            params={"id": response["loc"]["id"]}
-        )
+        try:
+            qrcode_response = efipay.pix_generate_qrcode(
+                params={"id": response["loc"]["id"]}
+            )
+            if not isinstance(qrcode_response, dict):
+                raise Exception(f"Resposta inesperada no QRCode: {qrcode_response}")
+        except Exception as e:
+            print("❌ Erro no QRCode Efí:", str(e))
+            raise
 
         copia_cola = qrcode_response["qrcode"]
 
@@ -54,6 +60,7 @@ def gerar_pix(compra):
     except Exception as e:
         print("❌ Erro ao gerar PIX:", str(e))
         raise
+
 
 
 
