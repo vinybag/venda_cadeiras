@@ -24,10 +24,18 @@
 
     <div class="pix-box">
         <h3>Escaneie o QR Code:</h3>
-        <img src="{{ compra.pix_qrcode.url }}" alt="QR Code Pix">
+        {% if compra.pix_qrcode %}
+            <img src="{{ compra.pix_qrcode.url }}" alt="QR Code Pix">
+        {% else %}
+            <p>⚠️ O QR Code ainda não foi gerado. Recarregue a página em alguns segundos.</p>
+        {% endif %}
 
         <h3>Ou use o copia e cola:</h3>
-        <textarea readonly style="width:100%;height:80px;">{{ compra.pix_copia_cola }}</textarea>
+        {% if compra.pix_copia_cola %}
+            <textarea readonly style="width:100%;height:80px;">{{ compra.pix_copia_cola }}</textarea>
+        {% else %}
+            <p>⚠️ O código copia e cola ainda não está disponível.</p>
+        {% endif %}
     </div>
 
     <form action="{% url 'cancelar_reserva' compra.id %}" method="post">
@@ -37,7 +45,7 @@
 
     <script>
         const expiraEm = new Date("{{ compra.reservado_ate|date:'Y-m-d H:i:s' }}").getTime();
-        let contadorAtivo = true; // controla se o contador continua rodando
+        let contadorAtivo = true;
 
         function atualizarContador() {
             if (!contadorAtivo) return;
@@ -59,13 +67,12 @@
                 minutos + "m " + (segundos < 10 ? "0" : "") + segundos + "s";
         }
 
-        // Verifica o status do pagamento a cada 5 segundos
         function verificarStatus() {
             fetch("{% url 'verificar_status' compra.id %}")
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === "pago") {
-                        contadorAtivo = false; // para o contador
+                        contadorAtivo = false;
                         alert("✅ Pagamento confirmado com sucesso!");
                         window.location.href = "{% url 'baixar_ingresso' compra.id %}";
                     }
@@ -74,11 +81,12 @@
         }
 
         atualizarContador();
-        setInterval(atualizarContador, 1000); // atualiza contador a cada 1s
-        setInterval(verificarStatus, 5000);   // checa pagamento a cada 5s
+        setInterval(atualizarContador, 1000);
+        setInterval(verificarStatus, 5000);
     </script>
 </body>
 </html>
+
 
 
 

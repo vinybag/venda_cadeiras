@@ -36,6 +36,16 @@ class Compra(models.Model):
     status = models.CharField(max_length=20, default="pendente")
     reservado_ate = models.DateTimeField(default=default_reserva)  # ✅
 
+    txid = models.CharField(max_length=100, blank=True, null=True)
+    valor = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+
+    # 🔑 novos campos para PIX
+    pix_qrcode = models.ImageField(upload_to="pix", blank=True, null=True)
+    pix_copia_cola = models.TextField(blank=True, null=True)
+
+    reservado_ate = models.DateTimeField(blank=True, null=True)
+    pago = models.BooleanField(default=False)
+
     def __str__(self):
         return f"{self.nome} - {self.assento.nome} ({self.status})"
 
