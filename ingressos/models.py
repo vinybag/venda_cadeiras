@@ -26,23 +26,19 @@ class Assento(models.Model):
 
 
 class Compra(models.Model):
+    nome = models.CharField(max_length=255)
+    email = models.EmailField(blank=True, null=True)
+    whatsapp = models.CharField(max_length=20, blank=True, null=True)
     assento = models.ForeignKey(Assento, on_delete=models.CASCADE)
-    nome = models.CharField(max_length=100)
-    email = models.EmailField()
-    whatsapp = models.CharField(max_length=20)
-    criado_em = models.DateTimeField(default=now)
-    reservado_ate = models.DateTimeField(default=default_reserva)
-    status = models.CharField(
-        max_length=20,
-        choices=[("pendente", "Pendente"), ("pago", "Pago"), ("cancelado", "Cancelado")],
-        default="pendente"
-    )
-    valor = models.DecimalField(max_digits=8, decimal_places=2, default=50.00)  # 👈 Novo campo
-    pix_qrcode = models.ImageField(upload_to="qrcodes", blank=True, null=True)
-    pix_copia_cola = models.TextField(blank=True, null=True)
+    valor = models.DecimalField(max_digits=10, decimal_places=2, default=50.00)
+    txid = models.CharField(max_length=100, blank=True, null=True)
+    pago = models.BooleanField(default=False)
+    status = models.CharField(max_length=20, default="pendente")
+    reservado_ate = models.DateTimeField(default=default_reserva)  # ✅
 
     def __str__(self):
-        return f"Compra {self.id} - {self.assento.nome} (R$ {self.valor})"
+        return f"{self.nome} - {self.assento.nome} ({self.status})"
+
 
 
 class Configuracao(models.Model):

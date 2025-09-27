@@ -19,10 +19,10 @@
     <h1>Mapa de Assentos</h1>
     
     <div class="mapa-container">
-        <img src="{% static 'ingressos/MAPA.png' %}" 
-             usemap="#mapa" 
-             alt="Mapa de assentos" 
-             width="{{ largura_exibida }}">
+        <img src="{% static 'ingressos/MAPA.png' %}"
+     usemap="#mapa"
+     alt="Mapa de assentos"
+     width="{{ largura_exibida }}">
 
         <map name="mapa">
             {% for assento in assentos %}
