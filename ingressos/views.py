@@ -246,34 +246,42 @@ def verificar_status_pagamento(request, compra_id):
         return JsonResponse({"status": "erro", "mensagem": "Compra não encontrada"}, status=404)
 
 @csrf_exempt
-@require_POST
 def webhook_pix(request):
-    try:
-        print("📩 Webhook recebido RAW:", request.body)  # log bruto
-        data = json.loads(request.body.decode("utf-8"))
-        print("📩 Webhook JSON parseado:", data)
+    if request.method == "GET":
+        return JsonResponse({"status": "ativo", "mensagem": "Webhook PIX está funcionando 🚀"})
 
-        pix_list = data.get("pix", [])
-        for pix in pix_list:
-            txid = pix.get("txid")
-            valor = pix.get("valor", {}).get("original")
-            print(f"🔎 Encontrado PIX txid={txid}, valor={valor}")
+    if request.method == "POST":
+        try:
+            raw_body = request.body
+            print("📩 Webhook recebido RAW:", raw_body)
 
-            if txid and txid.startswith("compra"):
-                compra_id = txid.replace("compra", "")
-                try:
-                    compra = Compra.objects.get(id=compra_id)
-                    compra.status = "pago"
-                    compra.save()
-                    gerar_pdf_ingresso(compra)
-                    print(f"✅ Pagamento confirmado para compra {compra.id}")
-                except Compra.DoesNotExist:
-                    print(f"⚠️ Compra não encontrada para txid={txid}")
+            data = json.loads(raw_body.decode("utf-8"))
+            print("📩 Webhook JSON parseado:", data)
 
-        return JsonResponse({"status": "ok"})
-    except Exception as e:
-        print("❌ Erro no webhook PIX:", str(e))
-        return JsonResponse({"status": "erro"}, status=400)
+            pix_list = data.get("pix", [])
+            for pix in pix_list:
+                txid = pix.get("txid")
+                valor = pix.get("valor", {}).get("original")
+                print(f"🔎 Encontrado PIX txid={txid}, valor={valor}")
+
+                if txid and txid.startswith("compra"):
+                    compra_id = txid.replace("compra", "")
+                    try:
+                        compra = Compra.objects.get(id=compra_id)
+                        compra.status = "pago"
+                        compra.save()
+                        gerar_pdf_ingresso(compra)
+                        print(f"✅ Pagamento confirmado para compra {compra_id}")
+                    except Compra.DoesNotExist:
+                        print(f"⚠️ Compra não encontrada para txid={txid}")
+
+            return JsonResponse({"status": "ok"})
+        except Exception as e:
+            print("❌ Erro no webhook PIX:", str(e))
+            return JsonResponse({"status": "erro", "detalhe": str(e)}, status=400)
+
+    return JsonResponse({"erro": "Método não permitido"}, status=405)
+
 
 
 
