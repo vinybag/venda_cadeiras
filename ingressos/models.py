@@ -30,25 +30,22 @@ class Compra(models.Model):
     email = models.EmailField(blank=True, null=True)
     whatsapp = models.CharField(max_length=20, blank=True, null=True)
     assento = models.ForeignKey(Assento, on_delete=models.CASCADE)
+
+    # Valor e status da compra
     valor = models.DecimalField(max_digits=10, decimal_places=2, default=50.00)
-    txid = models.CharField(max_length=100, blank=True, null=True)
+    status = models.CharField(max_length=20, default="pendente")  # pendente | pago | cancelado
+    reservado_ate = models.DateTimeField(default=default_reserva)
     pago = models.BooleanField(default=False)
-    status = models.CharField(max_length=20, default="pendente")
-    reservado_ate = models.DateTimeField(default=default_reserva)  # ✅
 
+    # Identificador da cobrança PIX (txid único da Efí)
     txid = models.CharField(max_length=100, blank=True, null=True)
-    valor = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
-    # 🔑 novos campos para PIX
+    # 🔑 Campos de PIX
     pix_qrcode = models.ImageField(upload_to="pix", blank=True, null=True)
     pix_copia_cola = models.TextField(blank=True, null=True)
 
-    reservado_ate = models.DateTimeField(blank=True, null=True)
-    pago = models.BooleanField(default=False)
-
     def __str__(self):
         return f"{self.nome} - {self.assento.nome} ({self.status})"
-
 
 
 class Configuracao(models.Model):
